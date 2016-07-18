@@ -1,0 +1,9 @@
+<main class="container" role="main">
+  <ul>
+    <li class="movie" *ngFor="let movie of movies">
+      <div class="panel-body">
+        <h3>{{movie.title}}</h3><span>{{movie.release_date}}</span>
+      </div>
+    </li>
+  </ul>
+</main>

@@ -9,13 +9,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var http_1 = require('@angular/http');
+var movie_service_1 = require('./movie/movie.service');
+var movies_component_1 = require("./movie/movies.component");
 var AppComponent = (function () {
     function AppComponent() {
     }
     AppComponent = __decorate([
         core_1.Component({
-            selector: 'my-app',
-            template: '<h1>AppelsAPP</h1>'
+            selector: 'appelsAPP',
+            template: "<h1>AppelsAPP</h1>\n               <movies></movies>\n    ",
+            directives: [movies_component_1.MoviesComponent],
+            providers: [movie_service_1.MovieService, http_1.HTTP_PROVIDERS]
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);

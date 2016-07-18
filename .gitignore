@@ -1,2 +1,9 @@
 .gitignore
 .idea/*
+
+typings
+node_modules
+app/**/*.js
+app/**/*.map
+jspm_packages
+bower_components
