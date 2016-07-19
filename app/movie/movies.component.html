@@ -2,7 +2,8 @@
   <ul>
     <li class="movie" *ngFor="let movie of movies">
       <div class="panel-body">
-        <h3>{{movie.title}}</h3><span>{{movie.release_date}}</span>
+        <h3>{{movie.title}}</h3><span>{{movie.release_date | date:"yyyy"}}</span>
+        <span><img [src]="'https://image.tmdb.org/t/p/w185' + movie.poster_path"></span>
       </div>
     </li>
   </ul>
