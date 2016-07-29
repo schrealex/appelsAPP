@@ -9,15 +9,15 @@ import {Movie} from "./movie";
 export class MoviesComponent {
   heading = "Movies"
   movies: Object[] = [];
+  title = '';
 
   constructor(private movieService: MovieService) { }
 
   ngOnInit() {
-    console.log(this.movies);
 
-    this.movieService.getMovies()
-        .subscribe(response => this.movies = response.results);
+  }
 
-    console.log(this.movies);
+  searchMovie() {
+    this.movieService.getMovie(this.title).subscribe(response => this.movies = response.results);
   }
 }
